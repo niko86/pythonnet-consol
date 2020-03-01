@@ -1,0 +1,32 @@
+﻿<Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Oedometer Converter" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" UseLayoutRounding="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="OpenFileButton" Content="Open Files" Grid.Column="0" Margin="10,10,10,10" UseLayoutRounding="True"/>
+                <Button Name="SaveXMLButton" Content="Save XML" Grid.Column="1" Margin="10,10,10,10" UseLayoutRounding="True"/>
+            </Grid>
+            <Label Content="Select stage in dropdown below:" Margin="10,0,10,0" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" UseLayoutRounding="True"/>
+            <ComboBox Name="FileComboBox" Grid.Row="2" Margin="10,10,10,10" UseLayoutRounding="True"/>
+            <TextBox Name="LogTextBox" TextWrapping="Wrap" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Grid.Row="3" Margin="10,10,10,10" UseLayoutRounding="True"/>
+        </Grid>
+        <Grid Grid.Column="1" UseLayoutRounding="True">
+            <Image Name="PlotImage" Stretch="Uniform" Margin="10,10,10,10" Grid.Row="0" />
+        </Grid>
+    </Grid>
+</Window>
